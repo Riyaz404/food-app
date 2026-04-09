@@ -1,0 +1,182 @@
+import type { FoodItem } from "@/context/cart-context"
+
+export const categories = [
+  { id: "meals", name: "Meals", icon: "utensils" },
+  { id: "combos", name: "Combos", icon: "package" },
+  { id: "quick", name: "Quick Items", icon: "zap" },
+] as const
+
+export type BadgeType = "bestseller" | "budget" | "fresh" | "spicy"
+
+export interface MenuItemWithBadges extends FoodItem {
+  badges?: BadgeType[]
+  tag?: string
+}
+
+export const menuItems: MenuItemWithBadges[] = [
+  // Main Meals - Highlight Section
+  {
+    id: "andhra-chicken-curry-meal",
+    name: "Andhra Chicken Curry Meal",
+    price: 180,
+    image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&h=300&fit=crop",
+    category: "meals",
+    description: "Rice + Chicken Curry + Dal + Pickle",
+    badges: ["bestseller", "spicy"],
+    tag: "Spicy Andhra Style",
+  },
+  {
+    id: "chicken-fry-meal",
+    name: "Chicken Fry Meal",
+    price: 160,
+    image: "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=400&h=300&fit=crop",
+    category: "meals",
+    description: "Rice + Crispy Chicken Fry + Dal + Pickle",
+    badges: ["fresh"],
+    tag: "Freshly Cooked",
+  },
+  {
+    id: "fish-curry-meal",
+    name: "Fish Curry Meal",
+    price: 200,
+    image: "https://images.unsplash.com/photo-1626777553635-be342a766ed0?w=400&h=300&fit=crop",
+    category: "meals",
+    description: "Rice + Chepala Pulusu + Dal + Pickle",
+    badges: ["spicy"],
+    tag: "Authentic Chepala Pulusu",
+  },
+  {
+    id: "egg-curry-meal",
+    name: "Egg Curry Meal",
+    price: 120,
+    image: "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=400&h=300&fit=crop",
+    category: "meals",
+    description: "Rice + Egg Curry + Dal + Pickle",
+    badges: ["budget", "fresh"],
+    tag: "Freshly Cooked",
+  },
+  {
+    id: "mutton-curry-meal",
+    name: "Mutton Curry Meal",
+    price: 250,
+    image: "https://images.unsplash.com/photo-1545247181-516773cae754?w=400&h=300&fit=crop",
+    category: "meals",
+    description: "Rice + Spicy Mutton Curry + Dal + Pickle",
+    badges: ["spicy"],
+    tag: "Spicy Andhra Style",
+  },
+  
+  // Budget Combos - High Conversion
+  {
+    id: "bachelor-combo",
+    name: "Bachelor Combo",
+    price: 99,
+    image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&h=300&fit=crop",
+    category: "combos",
+    description: "Rice + Dal + Egg Fry",
+    badges: ["budget"],
+    tag: "Best Value",
+  },
+  {
+    id: "mini-chicken-combo",
+    name: "Mini Chicken Combo",
+    price: 129,
+    image: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400&h=300&fit=crop",
+    category: "combos",
+    description: "Rice + Chicken Piece + Dal",
+    badges: ["budget", "bestseller"],
+    tag: "Popular Choice",
+  },
+  {
+    id: "full-meal-combo",
+    name: "Full Meal Combo",
+    price: 149,
+    image: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&h=300&fit=crop",
+    category: "combos",
+    description: "Rice + Chicken Curry + Dal + Curd + Pickle",
+    badges: ["budget"],
+    tag: "Complete Meal",
+  },
+  {
+    id: "student-special",
+    name: "Student Special",
+    price: 79,
+    image: "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=400&h=300&fit=crop",
+    category: "combos",
+    description: "Rice + Dal + Pickle + Papad",
+    badges: ["budget"],
+    tag: "Budget Friendly",
+  },
+  
+  // Quick Items - Fast Selling
+  {
+    id: "chicken-fry",
+    name: "Chicken Fry",
+    price: 120,
+    image: "https://images.unsplash.com/photo-1562967914-608f82629710?w=400&h=300&fit=crop",
+    category: "quick",
+    description: "Crispy spiced chicken fry (4 pcs)",
+    badges: ["bestseller", "spicy"],
+    tag: "Hot & Crispy",
+  },
+  {
+    id: "chicken-pakodi",
+    name: "Chicken Pakodi",
+    price: 100,
+    image: "https://images.unsplash.com/photo-1626132647523-66f6b676b87c?w=400&h=300&fit=crop",
+    category: "quick",
+    description: "Spicy chicken fritters",
+    badges: ["spicy"],
+    tag: "Crunchy Snack",
+  },
+  {
+    id: "egg-masala",
+    name: "Egg Masala",
+    price: 60,
+    image: "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=400&h=300&fit=crop",
+    category: "quick",
+    description: "Boiled eggs in spicy masala (2 pcs)",
+    badges: ["fresh"],
+    tag: "Quick Bite",
+  },
+  {
+    id: "single-omelette",
+    name: "Single Omelette",
+    price: 30,
+    image: "https://images.unsplash.com/photo-1525184782196-8e2ded604bf7?w=400&h=300&fit=crop",
+    category: "quick",
+    description: "Fluffy masala omelette",
+    badges: ["budget"],
+    tag: "Quick & Easy",
+  },
+  {
+    id: "double-omelette",
+    name: "Double Omelette",
+    price: 50,
+    image: "https://images.unsplash.com/photo-1510693206972-df098062cb71?w=400&h=300&fit=crop",
+    category: "quick",
+    description: "Double egg masala omelette",
+    badges: ["budget"],
+    tag: "More Protein",
+  },
+  {
+    id: "chicken-65",
+    name: "Chicken 65",
+    price: 140,
+    image: "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=400&h=300&fit=crop",
+    category: "quick",
+    description: "Spicy deep-fried chicken",
+    badges: ["bestseller", "spicy"],
+    tag: "Hyderabadi Special",
+  },
+  {
+    id: "fish-fry",
+    name: "Fish Fry",
+    price: 150,
+    image: "https://images.unsplash.com/photo-1580476262798-bddd9f4b7369?w=400&h=300&fit=crop",
+    category: "quick",
+    description: "Crispy fried fish (2 pcs)",
+    badges: ["fresh"],
+    tag: "Freshly Fried",
+  },
+]
