@@ -139,7 +139,7 @@ Prepare fresh!`
                 className="w-full px-4 py-3 bg-input border border-border rounded-xl text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 resize-none"
               />
             </div>
-          </div>
+          </div> 
         </section>
 
         {/* Payment Method */}
