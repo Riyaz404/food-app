@@ -2,7 +2,7 @@
 
 import { MessageCircle } from "lucide-react"
 
-const WHATSAPP_NUMBER = "919999999999" // Replace with actual number
+const WHATSAPP_NUMBER = "916303671353" // Replace with actual number
 
 export function WhatsAppButton() {
   const handleClick = () => {
@@ -11,7 +11,7 @@ export function WhatsAppButton() {
   }
 
   return (
-    <button
+    <button 
       onClick={handleClick}
       className="fixed bottom-24 right-4 z-40 bg-[#25D366] text-white p-3.5 rounded-full shadow-lg shadow-[#25D366]/30 active:scale-95 transition-transform touch-manipulation"
       aria-label="Chat on WhatsApp"

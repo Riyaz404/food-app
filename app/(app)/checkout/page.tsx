@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation"
 import { ArrowLeft, MapPin, CreditCard, Banknote } from "lucide-react"
 import { useCart } from "@/context/cart-context"
 
-const WHATSAPP_NUMBER = "919999999999" // Replace with actual number
+const WHATSAPP_NUMBER = "916303671353" // Replace with actual number
 
 type PaymentMethod = "cod" | "upi"
 
